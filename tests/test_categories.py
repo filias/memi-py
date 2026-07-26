@@ -18,7 +18,7 @@ def test_expected_category_keys():
         "life:animals",
         "life:plants",
         "parks:all",
-        "parks:Ordesa",
+        "parks:Ordesa y Monte Perdido",
         "parks:Aigüestortes",
         "parks:Pyrénées",
         "parks:Posets-Maladeta",

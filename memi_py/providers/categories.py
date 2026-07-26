@@ -247,7 +247,7 @@ class AllParks(WikiImages, CategoryProvider):
 
 
 class OrdesaLandmarks(WikiImages, CategoryProvider):
-    key = "parks:Ordesa"
+    key = "parks:Ordesa y Monte Perdido"
     override_name = True
     items = [
         "Monte Perdido",

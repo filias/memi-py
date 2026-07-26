@@ -14,7 +14,7 @@ Live at [py.memi.click](https://py.memi.click)
 - **life → animals** — 12 animals of the high Pyrenees, tagged with Latin names
 - **life → plants** — 8 mountain plants, tagged with Latin names
 - **parks → all** — the 7 national and natural parks of the Pyrenees
-- **parks → Ordesa / Aigüestortes / Pyrénées / Posets-Maladeta / Guara** — the
+- **parks → Ordesa y Monte Perdido / Aigüestortes / Pyrénées / Posets-Maladeta / Guara** — the
   notable landmarks (peaks, valleys, lakes, cirques) inside each of the five
   parks with enough Wikipedia-imaged features to guess between
 

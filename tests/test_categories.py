@@ -12,8 +12,8 @@ def test_expected_category_keys():
     keys = {p.key for p in cat.PROVIDERS}
     assert keys == {
         "peaks",
-        "nature:animals",
-        "nature:plants",
+        "wildlife",
+        "flora",
         "lakes",
         "valleys",
         "passes",

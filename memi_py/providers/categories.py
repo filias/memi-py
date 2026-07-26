@@ -107,7 +107,7 @@ class Peaks(WikiImages, CategoryProvider):
 
 
 class Animals(WikiImages, ScientificNameProvider):
-    key = "nature:animals"
+    key = "wildlife"
     override_name = True
     items = [
         "Pyrenean chamois",
@@ -145,7 +145,7 @@ class Animals(WikiImages, ScientificNameProvider):
 
 
 class Plants(WikiImages, ScientificNameProvider):
-    key = "nature:plants"
+    key = "flora"
     override_name = True
     items = [
         "Pyrenean saxifrage",

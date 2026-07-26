@@ -8,12 +8,12 @@ Live at [py.memi.click](https://py.memi.click)
 ## Categories
 
 - **peaks** — 12 great summits of the range, tagged with their elevation
-- **nature: animals** — 12 animals of the high Pyrenees, tagged with Latin names
-- **nature: plants** — 8 mountain plants, tagged with Latin names
+- **wildlife** — 12 animals of the high Pyrenees, tagged with Latin names
+- **flora** — 8 mountain plants, tagged with Latin names
 - **lakes** — 6 mountain lakes (lacs, ibones, estanys)
 - **valleys** — 6 famous valleys
 - **passes** — 6 mountain passes (cols and ports)
-- **parks** — the three national parks
+- **parks → national / natural** — 3 national parks and 4 natural parks
 
 Images and *know more* links resolve from Wikipedia automatically. A small
 `WikiImages` mixin (in `memi_py/providers/categories.py`) relaxes the engine's

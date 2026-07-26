@@ -17,6 +17,7 @@ def test_expected_category_keys():
         "landscapes:passes",
         "life:animals",
         "life:plants",
+        "life:butterflies",
         "parks:all",
         "parks:Ordesa y Monte Perdido",
         "parks:Aigüestortes",
@@ -43,7 +44,7 @@ def test_peaks_tags():
 
 
 def test_scientific_names_cover_all_items():
-    for cls in (cat.Animals, cat.Plants):
+    for cls in (cat.Animals, cat.Plants, cat.Butterflies):
         for item in cls.items:
             assert item in cls.scientific_names, (
                 f"{cls.__name__} missing latin name for {item}"

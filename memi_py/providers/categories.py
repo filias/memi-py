@@ -122,6 +122,18 @@ class Animals(WikiImages, ScientificNameProvider):
         "Pyrenean brook salamander",
         "Wallcreeper",
         "Rock ptarmigan",
+        "Iberian ibex",
+        "Snow vole",
+        "Pine marten",
+        "Stoat",
+        "Alpine chough",
+        "Snowfinch",
+        "Citril finch",
+        "Black woodpecker",
+        "Eurasian eagle-owl",
+        "Fire salamander",
+        "Pyrenean frog",
+        "White-throated dipper",
     ]
     scientific_names = {
         "Pyrenean chamois": "Rupicapra pyrenaica",
@@ -136,6 +148,18 @@ class Animals(WikiImages, ScientificNameProvider):
         "Pyrenean brook salamander": "Calotriton asper",
         "Wallcreeper": "Tichodroma muraria",
         "Rock ptarmigan": "Lagopus muta",
+        "Iberian ibex": "Capra pyrenaica",
+        "Snow vole": "Chionomys nivalis",
+        "Pine marten": "Martes martes",
+        "Stoat": "Mustela erminea",
+        "Alpine chough": "Pyrrhocorax graculus",
+        "Snowfinch": "Montifringilla nivalis",
+        "Citril finch": "Carduelis citrinella",
+        "Black woodpecker": "Dryocopus martius",
+        "Eurasian eagle-owl": "Bubo bubo",
+        "Fire salamander": "Salamandra salamandra",
+        "Pyrenean frog": "Rana pyrenaica",
+        "White-throated dipper": "Cinclus cinclus",
     }
 
 
@@ -166,6 +190,50 @@ class Plants(WikiImages, ScientificNameProvider):
         "Trumpet gentian": "Gentiana acaulis",
         "Pyrenean squill": "Scilla lilio-hyacinthus",
         "Pyrenean oak": "Quercus pyrenaica",
+    }
+
+
+# --------------------------------------------------------------------------- #
+# Butterflies — the Pyrenees are a European butterfly hotspot. Latin tags.     #
+# --------------------------------------------------------------------------- #
+
+
+class Butterflies(WikiImages, ScientificNameProvider):
+    key = "life:butterflies"
+    override_name = True
+    items = [
+        "Apollo",
+        "Clouded Apollo",
+        "Swallowtail",
+        "Scarce swallowtail",
+        "Camberwell beauty",
+        "Marbled white",
+        "Cardinal",
+        "Purple-shot copper",
+        "Escher's blue",
+        "Mountain clouded yellow",
+        "Gavarnie blue",
+        "Gavarnie ringlet",
+        "Spanish argus",
+        "Niobe fritillary",
+        "Peak white",
+    ]
+    scientific_names = {
+        "Apollo": "Parnassius apollo",
+        "Clouded Apollo": "Parnassius mnemosyne",
+        "Swallowtail": "Papilio machaon",
+        "Scarce swallowtail": "Iphiclides podalirius",
+        "Camberwell beauty": "Nymphalis antiopa",
+        "Marbled white": "Melanargia galathea",
+        "Cardinal": "Argynnis pandora",
+        "Purple-shot copper": "Lycaena alciphron",
+        "Escher's blue": "Polyommatus escheri",
+        "Mountain clouded yellow": "Colias phicomone",
+        "Gavarnie blue": "Agriades pyrenaicus",
+        "Gavarnie ringlet": "Erebia gorgone",
+        "Spanish argus": "Aricia morronensis",
+        "Niobe fritillary": "Fabriciana niobe",
+        "Peak white": "Pontia callidice",
     }
 
 
@@ -256,6 +324,7 @@ class OrdesaLandmarks(WikiImages, CategoryProvider):
         "Ordesa Valley",
         "Cola de Caballo",
         "Brèche de Roland",
+        "Torla",
     ]
     queries = {"Brèche de Roland": "Roland's Breach"}
 
@@ -270,6 +339,7 @@ class AiguestortesLandmarks(WikiImages, CategoryProvider):
         "Besiberri",
         "Estany de Sant Maurici",
         "Vall de Boí",
+        "Colomers",
     ]
     queries = {"Els Encantats": "Gran Encantat"}
 
@@ -283,9 +353,13 @@ class PyreneesParkLandmarks(WikiImages, CategoryProvider):
         "Pic du Midi d'Ossau",
         "Pic de Néouvielle",
         "Cirque de Gavarnie",
+        "Cirque d'Estaubé",
         "Gavarnie Falls",
+        "Pont d'Espagne",
         "Lac de Gaube",
         "Ossau Valley",
+        "Cauterets",
+        "Pic Long",
     ]
     queries = {"Lac de Gaube": "Gaube Lake"}
 
@@ -300,6 +374,8 @@ class PosetsMaladetaLandmarks(WikiImages, CategoryProvider):
         "Pico Maldito",
         "Forau de Aigualluts",
         "Aneto Glacier",
+        "Vallibierna",
+        "La Renclusa",
     ]
     queries = {"Posets": "Pico Posets", "Forau de Aigualluts": "Aigualluts"}
 
@@ -312,6 +388,8 @@ class GuaraLandmarks(WikiImages, CategoryProvider):
         "Alquézar",
         "Sierra de Guara",
         "Salto de Bierge",
+        "Colungo",
+        "Alcanadre",
     ]
 
 
@@ -319,6 +397,7 @@ PROVIDERS = [
     Peaks(),
     Animals(),
     Plants(),
+    Butterflies(),
     Lakes(),
     Valleys(),
     Passes(),

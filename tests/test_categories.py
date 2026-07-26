@@ -17,8 +17,12 @@ def test_expected_category_keys():
         "landscapes:passes",
         "life:animals",
         "life:plants",
-        "parks:national",
-        "parks:natural",
+        "parks:all",
+        "parks:Ordesa",
+        "parks:Aigüestortes",
+        "parks:Pyrénées",
+        "parks:Posets-Maladeta",
+        "parks:Guara",
     }
 
 

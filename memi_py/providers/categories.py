@@ -221,27 +221,97 @@ class Passes(WikiImages, CategoryProvider):
     ]
 
 
-class NationalParks(WikiImages, CategoryProvider):
-    key = "parks:national"
+# --------------------------------------------------------------------------- #
+# Parks — an "all" overview of the 7 parks, plus the notable landmarks inside  #
+# the parks that have enough Wikipedia-imaged features to guess between.       #
+# (Alt Pirineu and Cadí-Moixeró lack enough distinct imaged landmarks, so they #
+# appear only in the overview, without their own landmark menu.)               #
+# --------------------------------------------------------------------------- #
+
+PARKS_ALL = [
+    "Ordesa y Monte Perdido National Park",
+    "Aigüestortes i Estany de Sant Maurici National Park",
+    "Pyrenees National Park",
+    "Posets-Maladeta Natural Park",
+    "Sierra y Cañones de Guara Natural Park",
+    "Alt Pirineu Natural Park",
+    "Cadí-Moixeró Natural Park",
+]
+
+
+class AllParks(WikiImages, CategoryProvider):
+    key = "parks:all"
+    override_name = True
+    items = PARKS_ALL
+    queries = {"Pyrenees National Park": "Pyrénées National Park"}
+
+
+class OrdesaLandmarks(WikiImages, CategoryProvider):
+    key = "parks:Ordesa"
     override_name = True
     items = [
-        "Ordesa y Monte Perdido National Park",
-        "Aigüestortes i Estany de Sant Maurici National Park",
-        "Pyrenees National Park",
+        "Monte Perdido",
+        "Cilindro de Marboré",
+        "Soum de Ramond",
+        "Ordesa Valley",
+        "Cola de Caballo",
+        "Brèche de Roland",
     ]
-    queries = {
-        "Pyrenees National Park": "Pyrénées National Park",
-    }
+    queries = {"Brèche de Roland": "Roland's Breach"}
 
 
-class NaturalParks(WikiImages, CategoryProvider):
-    key = "parks:natural"
+class AiguestortesLandmarks(WikiImages, CategoryProvider):
+    key = "parks:Aigüestortes"
     override_name = True
     items = [
-        "Posets-Maladeta Natural Park",
-        "Sierra y Cañones de Guara Natural Park",
-        "Alt Pirineu Natural Park",
-        "Cadí-Moixeró Natural Park",
+        "Els Encantats",
+        "Pic de Peguera",
+        "Comaloforno",
+        "Besiberri",
+        "Estany de Sant Maurici",
+        "Vall de Boí",
+    ]
+    queries = {"Els Encantats": "Gran Encantat"}
+
+
+class PyreneesParkLandmarks(WikiImages, CategoryProvider):
+    key = "parks:Pyrénées"
+    override_name = True
+    items = [
+        "Vignemale",
+        "Balaïtous",
+        "Pic du Midi d'Ossau",
+        "Pic de Néouvielle",
+        "Cirque de Gavarnie",
+        "Gavarnie Falls",
+        "Lac de Gaube",
+        "Ossau Valley",
+    ]
+    queries = {"Lac de Gaube": "Gaube Lake"}
+
+
+class PosetsMaladetaLandmarks(WikiImages, CategoryProvider):
+    key = "parks:Posets-Maladeta"
+    override_name = True
+    items = [
+        "Aneto",
+        "Posets",
+        "Maladeta",
+        "Pico Maldito",
+        "Forau de Aigualluts",
+        "Aneto Glacier",
+    ]
+    queries = {"Posets": "Pico Posets", "Forau de Aigualluts": "Aigualluts"}
+
+
+class GuaraLandmarks(WikiImages, CategoryProvider):
+    key = "parks:Guara"
+    override_name = True
+    items = [
+        "Rodellar",
+        "Alquézar",
+        "Sierra de Guara",
+        "Salto de Bierge",
     ]
 
 
@@ -252,8 +322,12 @@ PROVIDERS = [
     Lakes(),
     Valleys(),
     Passes(),
-    NationalParks(),
-    NaturalParks(),
+    AllParks(),
+    OrdesaLandmarks(),
+    AiguestortesLandmarks(),
+    PyreneesParkLandmarks(),
+    PosetsMaladetaLandmarks(),
+    GuaraLandmarks(),
 ]
 for _provider in PROVIDERS:
     register(_provider)

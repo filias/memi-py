@@ -68,22 +68,22 @@ class WikiImages:
 
 
 # --------------------------------------------------------------------------- #
-# Peaks — the great summits. Tag = elevation, clue = which side of the range.  #
+# Peaks — the great summits. Tag = elevation (shown on reveal).                #
 # --------------------------------------------------------------------------- #
 
 PEAKS = {
-    "Aneto": (3404, "Spain — the highest summit of the Pyrenees"),
-    "Posets": (3375, "Spain — second highest of the range"),
-    "Monte Perdido": (3355, "Spain — the highest limestone massif in Europe"),
-    "Vignemale": (3298, "France / Spain border — highest French Pyrenean peak"),
-    "Balaïtous": (3144, "France / Spain border"),
-    "Pica d'Estats": (3143, "Spain / France — highest point of Catalonia"),
-    "Pic de Néouvielle": (3091, "France"),
-    "Puigmal": (2910, "France / Spain border, eastern Pyrenees"),
-    "Pic du Midi d'Ossau": (2884, "France — the unmistakable fang of the Ossau valley"),
-    "Pic du Midi de Bigorre": (2877, "France — famous for its observatory"),
-    "Mont Valier": (2838, "France — the emblem of the Ariège"),
-    "Canigou": (2784, "France — sacred mountain of the Catalans"),
+    "Aneto": 3404,
+    "Posets": 3375,
+    "Monte Perdido": 3355,
+    "Vignemale": 3298,
+    "Balaïtous": 3144,
+    "Pica d'Estats": 3143,
+    "Pic de Néouvielle": 3091,
+    "Puigmal": 2910,
+    "Pic du Midi d'Ossau": 2884,
+    "Pic du Midi de Bigorre": 2877,
+    "Mont Valier": 2838,
+    "Canigou": 2784,
 }
 
 
@@ -98,12 +98,7 @@ class Peaks(WikiImages, CategoryProvider):
     }
 
     def get_tag(self, item):
-        elevation, _ = PEAKS[item]
-        return f"{elevation:,} m"
-
-    def get_clue(self, item):
-        _, clue = PEAKS[item]
-        return clue
+        return f"{PEAKS[item]:,} m"
 
 
 # --------------------------------------------------------------------------- #
@@ -226,20 +221,39 @@ class Passes(WikiImages, CategoryProvider):
     ]
 
 
-class Parks(WikiImages, CategoryProvider):
-    key = "parks"
-    light_bg = True
+class NationalParks(WikiImages, CategoryProvider):
+    key = "parks:national"
     override_name = True
     items = [
-        "Pyrenees National Park",
         "Ordesa y Monte Perdido National Park",
         "Aigüestortes i Estany de Sant Maurici National Park",
+        "Pyrenees National Park",
     ]
     queries = {
         "Pyrenees National Park": "Pyrénées National Park",
     }
 
 
-PROVIDERS = [Peaks(), Animals(), Plants(), Lakes(), Valleys(), Passes(), Parks()]
+class NaturalParks(WikiImages, CategoryProvider):
+    key = "parks:natural"
+    override_name = True
+    items = [
+        "Posets-Maladeta Natural Park",
+        "Sierra y Cañones de Guara Natural Park",
+        "Alt Pirineu Natural Park",
+        "Cadí-Moixeró Natural Park",
+    ]
+
+
+PROVIDERS = [
+    Peaks(),
+    Animals(),
+    Plants(),
+    Lakes(),
+    Valleys(),
+    Passes(),
+    NationalParks(),
+    NaturalParks(),
+]
 for _provider in PROVIDERS:
     register(_provider)

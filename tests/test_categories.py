@@ -17,7 +17,8 @@ def test_expected_category_keys():
         "lakes",
         "valleys",
         "passes",
-        "parks",
+        "parks:national",
+        "parks:natural",
     }
 
 
@@ -29,11 +30,12 @@ def test_no_empty_or_duplicate_items():
         )
 
 
-def test_peaks_tags_and_clues():
+def test_peaks_tags():
     peaks = cat.Peaks()
     for item in peaks.items:
         assert peaks.get_tag(item).endswith("m")
-        assert peaks.get_clue(item)
+    # peaks should NOT emit a clue (it renders as an always-on subtitle)
+    assert not hasattr(peaks, "get_clue") or peaks.get_clue(peaks.items[0]) is None
 
 
 def test_scientific_names_cover_all_items():

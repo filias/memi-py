@@ -11,12 +11,12 @@ def test_app_builds():
 def test_expected_category_keys():
     keys = {p.key for p in cat.PROVIDERS}
     assert keys == {
-        "peaks",
-        "wildlife",
-        "flora",
-        "lakes",
-        "valleys",
-        "passes",
+        "landscapes:peaks",
+        "landscapes:lakes",
+        "landscapes:valleys",
+        "landscapes:passes",
+        "life:animals",
+        "life:plants",
         "parks:national",
         "parks:natural",
     }

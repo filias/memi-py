@@ -88,7 +88,7 @@ PEAKS = {
 
 
 class Peaks(WikiImages, CategoryProvider):
-    key = "peaks"
+    key = "landscapes:peaks"
     items = list(PEAKS)
     override_name = True  # keep our display names, not the Wikipedia article titles
     tag_style = "plain"
@@ -107,7 +107,7 @@ class Peaks(WikiImages, CategoryProvider):
 
 
 class Animals(WikiImages, ScientificNameProvider):
-    key = "wildlife"
+    key = "life:animals"
     override_name = True
     items = [
         "Pyrenean chamois",
@@ -145,7 +145,7 @@ class Animals(WikiImages, ScientificNameProvider):
 
 
 class Plants(WikiImages, ScientificNameProvider):
-    key = "flora"
+    key = "life:plants"
     override_name = True
     items = [
         "Pyrenean saxifrage",
@@ -175,7 +175,7 @@ class Plants(WikiImages, ScientificNameProvider):
 
 
 class Lakes(WikiImages, CategoryProvider):
-    key = "lakes"
+    key = "landscapes:lakes"
     override_name = True
     items = [
         "Lac de Gaube",
@@ -193,7 +193,7 @@ class Lakes(WikiImages, CategoryProvider):
 
 
 class Valleys(WikiImages, CategoryProvider):
-    key = "valleys"
+    key = "landscapes:valleys"
     override_name = True
     items = [
         "Ordesa Valley",
@@ -209,7 +209,7 @@ class Valleys(WikiImages, CategoryProvider):
 
 
 class Passes(WikiImages, CategoryProvider):
-    key = "passes"
+    key = "landscapes:passes"
     override_name = True
     items = [
         "Col du Tourmalet",

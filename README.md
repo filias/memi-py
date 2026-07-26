@@ -7,12 +7,12 @@ Live at [py.memi.click](https://py.memi.click)
 
 ## Categories
 
-- **peaks** — 12 great summits of the range, tagged with their elevation
-- **wildlife** — 12 animals of the high Pyrenees, tagged with Latin names
-- **flora** — 8 mountain plants, tagged with Latin names
-- **lakes** — 6 mountain lakes (lacs, ibones, estanys)
-- **valleys** — 6 famous valleys
-- **passes** — 6 mountain passes (cols and ports)
+- **landscapes → peaks** — 12 great summits of the range, tagged with elevation
+- **landscapes → lakes** — 6 mountain lakes (lacs, ibones, estanys)
+- **landscapes → valleys** — 6 famous valleys
+- **landscapes → passes** — 6 mountain passes (cols and ports)
+- **life → animals** — 12 animals of the high Pyrenees, tagged with Latin names
+- **life → plants** — 8 mountain plants, tagged with Latin names
 - **parks → national / natural** — 3 national parks and 4 natural parks
 
 Images and *know more* links resolve from Wikipedia automatically. A small

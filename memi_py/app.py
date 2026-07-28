@@ -5,6 +5,10 @@ from memi_engine import MemiConfig, create_app
 import memi_py.providers  # noqa: F401  (import registers the providers)
 
 config = MemiConfig(
+    analytics_html=(
+        '<script data-goatcounter="https://memi-py.goatcounter.com/count"'
+        ' async src="//gc.zgo.at/count.js"></script>'
+    ),
     title="memi pyrenees",
     subtitle="name the peaks, wildlife and lakes",
     wikipedia_lang="en",

@@ -13,6 +13,8 @@ config = MemiConfig(
     title="memi pyrenees",
     subtitle="name the peaks, wildlife and lakes",
     wikipedia_lang="en",
+    # Details panel beside the card on reveal: the Wikipedia intro and a map.
+    layout="enriched",
     favicon_color="#2f6b3d",
     sponsor_url="https://github.com/sponsors/filias",
     sponsor_text="sponsor",

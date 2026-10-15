@@ -87,10 +87,17 @@ PEAKS = {
 }
 
 
+# The Pyrenees, from the Basque end to Canigó. Wikidata coordinates outside
+# it belong to something other than the place on the card, so they get no map.
+PYRENEES_BOUNDS = ((42.0, 43.4), (-2.0, 2.7))
+
+
 class Peaks(WikiImages, CategoryProvider):
     key = "landscapes:peaks"
     items = list(PEAKS)
     override_name = True  # keep our display names, not the Wikipedia article titles
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     tag_style = "plain"
     queries = {
         "Posets": "Pico Posets",
@@ -245,6 +252,8 @@ class Butterflies(WikiImages, ScientificNameProvider):
 class Lakes(WikiImages, CategoryProvider):
     key = "landscapes:lakes"
     override_name = True
+    map_zoom = 14
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Lac de Gaube",
         "Lac d'Oô",
@@ -263,6 +272,8 @@ class Lakes(WikiImages, CategoryProvider):
 class Valleys(WikiImages, CategoryProvider):
     key = "landscapes:valleys"
     override_name = True
+    map_zoom = 11
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Ordesa Valley",
         "Aran Valley",
@@ -279,6 +290,8 @@ class Valleys(WikiImages, CategoryProvider):
 class Passes(WikiImages, CategoryProvider):
     key = "landscapes:passes"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Col du Tourmalet",
         "Col d'Aubisque",
@@ -310,6 +323,8 @@ PARKS_ALL = [
 class AllParks(WikiImages, CategoryProvider):
     key = "parks:all"
     override_name = True
+    map_zoom = 10
+    map_bounds = PYRENEES_BOUNDS
     items = PARKS_ALL
     queries = {"Pyrenees National Park": "Pyrénées National Park"}
 
@@ -317,6 +332,8 @@ class AllParks(WikiImages, CategoryProvider):
 class OrdesaLandmarks(WikiImages, CategoryProvider):
     key = "parks:Ordesa y Monte Perdido"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Monte Perdido",
         "Cilindro de Marboré",
@@ -332,6 +349,8 @@ class OrdesaLandmarks(WikiImages, CategoryProvider):
 class AiguestortesLandmarks(WikiImages, CategoryProvider):
     key = "parks:Aigüestortes"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Els Encantats",
         "Pic de Peguera",
@@ -347,6 +366,8 @@ class AiguestortesLandmarks(WikiImages, CategoryProvider):
 class PyreneesParkLandmarks(WikiImages, CategoryProvider):
     key = "parks:Pyrénées"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Vignemale",
         "Balaïtous",
@@ -367,6 +388,8 @@ class PyreneesParkLandmarks(WikiImages, CategoryProvider):
 class PosetsMaladetaLandmarks(WikiImages, CategoryProvider):
     key = "parks:Posets-Maladeta"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Aneto",
         "Posets",
@@ -383,6 +406,8 @@ class PosetsMaladetaLandmarks(WikiImages, CategoryProvider):
 class GuaraLandmarks(WikiImages, CategoryProvider):
     key = "parks:Guara"
     override_name = True
+    map_zoom = 13
+    map_bounds = PYRENEES_BOUNDS
     items = [
         "Rodellar",
         "Alquézar",
